@@ -37,8 +37,13 @@ root.render(<Task/>)
 // day04 : 생명주기1
 import Example1 from './example/3_훅/Example1.jsx'
 root.render(<Example1/>)
-*/
+
 
 // day04 : 생명주기2
 import Example2 from './example/3_훅/Example2.jsx'
 root.render(<Example2/>)
+*/
+
+// day04 : 생명주기3
+import Example3 from './example/3_훅/Exmaple3.jsx'
+root.render(<Example3/>)
