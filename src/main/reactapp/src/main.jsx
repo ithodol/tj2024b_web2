@@ -42,8 +42,18 @@ root.render(<Example1/>)
 // day04 : 생명주기2
 import Example2 from './example/3_훅/Example2.jsx'
 root.render(<Example2/>)
-*/
+
 
 // day04 : 생명주기3
 import Example3 from './example/3_훅/Exmaple3.jsx'
 root.render(<Example3/>)
+
+
+// day04 : 리액트 과제2
+import Task1 from './example/3_훅/Task1.jsx'
+root.render(<Task1/>)
+*/
+
+// day04 : 리액트 과제3
+import Task2 from './example/3_훅/Task2.jsx'
+root.render(<Task2/>)
