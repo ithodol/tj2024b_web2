@@ -11,7 +11,7 @@ import App from './App.jsx'
 
 // (*) index.html에 root DOM 가져오기.
 const root = createRoot( document.querySelector('#root') )
-
+/*
 // day01 : '컴포넌트 만들기' 렌더링 
     // import 호출할컴포넌트명 from '경로/파일명(확장자)';
 import Component1 from './example/1_동작구조/Component1.jsx'
@@ -32,3 +32,13 @@ root.render(<Example2/>)
 // day02 : 리액트 과제1
 import Task from './example/2_컴포넌트/Task.jsx'
 root.render(<Task/>)
+
+
+// day04 : 생명주기1
+import Example1 from './example/3_훅/Example1.jsx'
+root.render(<Example1/>)
+*/
+
+// day04 : 생명주기2
+import Example2 from './example/3_훅/Example2.jsx'
+root.render(<Example2/>)
