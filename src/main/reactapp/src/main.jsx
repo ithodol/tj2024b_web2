@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+//import './index.css'
+//import App from './App.jsx'
 
 // react18
 // (!) 기본 코드 주석처리
@@ -52,8 +52,19 @@ root.render(<Example3/>)
 // day04 : 리액트 과제2
 import Task1 from './example/3_훅/Task1.jsx'
 root.render(<Task1/>)
-*/
+
 
 // day04 : 리액트 과제3
 import Task2 from './example/3_훅/Task2.jsx'
 root.render(<Task2/>)
+
+
+// day05
+import Example1 from './example/4_훅2/Example1.jsx'
+root.render(<Example1/>)
+*/
+
+// day0 : 라우터
+// 기존에 존재하는 import 샘플코드 주석 처리
+import App from './example/5_라우터/Example1.jsx'
+root.render(<App/>)
