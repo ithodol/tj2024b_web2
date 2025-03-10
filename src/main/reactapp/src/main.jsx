@@ -62,9 +62,23 @@ root.render(<Task2/>)
 // day05
 import Example1 from './example/4_훅2/Example1.jsx'
 root.render(<Example1/>)
-*/
 
-// day0 : 라우터
+
+// day06 : 라우터
 // 기존에 존재하는 import 샘플코드 주석 처리
 import App from './example/5_라우터/Example1.jsx'
 root.render(<App/>)
+
+// day07 : axios
+import Example1 from './example/6_AXIOS/Example1'
+root.render(<Example1/>)
+
+
+// day07 : axios
+import Example2 from './example/6_AXIOS/Example2'
+root.render(<Example2/>)
+*/
+
+// day07 : 과제4
+import Task from './example/6_AXIOS/task'
+root.render(<Task/>)
