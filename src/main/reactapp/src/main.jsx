@@ -77,8 +77,13 @@ root.render(<Example1/>)
 // day07 : axios
 import Example2 from './example/6_AXIOS/Example2'
 root.render(<Example2/>)
-*/
+
 
 // day07 : 과제4
 import Task from './example/6_AXIOS/task'
 root.render(<Task/>)
+*/
+
+// day08 : 라우터 컴포넌트 렌더링
+import App from './example/7_AXIOS2/App'
+root.render( <App /> )
