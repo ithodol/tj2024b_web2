@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box; /* 사이즈에 테두리 포함 */
+    margin: 0;
+    padding: 0;
+}
+li{list-style-type: none;}
+a{color: black; text-decoration: none;}
+
+
+/* 전체 구역 */
+#wrap{
+    display: flex;
+}
+
+#wrap > div:nth-child(1){
+    width: 15%;
+}
+
+#sideMenu > li{
+    margin: 50px 20px;
+}
+
+#wrap > div:nth-child(2){
+    width: 85%;
+    margin: 50px 20px;
+}
