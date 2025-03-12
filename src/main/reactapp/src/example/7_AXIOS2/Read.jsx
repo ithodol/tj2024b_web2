@@ -1,5 +1,5 @@
 import { useEffect, useState} from "react"
-import axios from 'axios';
+import axios from "axios";
 
 export default function Read(props){
     // [1] 컴포넌트 최초 실행될 때 최초 1번 실행하는 생명주기 함수
@@ -11,7 +11,7 @@ export default function Read(props){
 
     // [2] axios 이용하여 서버와 통신한다
     const onRead = async () => {
-        const response = await axios.get('http://localhost:8080/day08/products')
+        const response = await axios.get('http://192.168.40.10:8080/day08/products')
         console.log(response.data);
         setProducts(response.data); // 서버로부터 받은 모든 제품정보를 상태변수에 저장한다
     }

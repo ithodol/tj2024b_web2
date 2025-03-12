@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react"
-import { Navigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export default function Create(props){
 
@@ -13,12 +13,14 @@ export default function Create(props){
         setProductForm({...productForm, [e.target.name] : e.target.value }); 
     }
 
+    
     // [3] 제품 등록 버튼을 클릭했을 때
+    const navigate  = useNavigate();
     const onCreate = async () => {
-        const response = await axios.post('http://localhost:8080/day08/products', productForm)
+        const response = await axios.post('http://192.168.40.10:8080/day08/products', productForm)
         if(response.data == true) {
             alert('제품 등록 성공');
-            Navigate('/read');
+            navigate('/read');
         }else{
             alert('제품 등록 실패');
         }
@@ -32,7 +34,7 @@ export default function Create(props){
             <form>
                 제품명 : <input type="text"  name='name' value={ productForm.name } onChange={ onValueChange }/> <br/>
                 제품가격 : <input type="text"  name='price' value={ productForm.price } onChange={ onValueChange }/> <br/>
-                제품설명 : <input type="text"  name='commnet' value={ productForm.commnet } onChange={ onValueChange }/> <br/>
+                제품설명 : <input type="text"  name='comment' value={ productForm.comment } onChange={ onValueChange }/> <br/>
                 <button type="button" onClick={onCreate}>등록</button>
             </form>
         </div>

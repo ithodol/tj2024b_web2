@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController // 스프링 빈 등록
 @RequestMapping("/day08/products") // 공통 URL 정의
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin("http://192.168.40.10:5173")
 public class ProductController {
 
     // (1) 서비스 메소드를 사용하기 위한 객체 주입
