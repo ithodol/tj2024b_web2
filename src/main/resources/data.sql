@@ -1,5 +1,3 @@
--- ---------------------- day08 ---------------------------------- --
-insert into products( name , price , comment ) values ( '코카콜라' , 1000 , '맛있는 코카콜라' );
-insert into products( name , price , comment ) values ( '사이다' , 1700 , '제로 사이다입니다.' );
-insert into products( name , price , comment ) values ( '환타' , 2000 , '새로나온 환타 맛 입니다.' );
--- ---------------------- ------ ---------------------------------- --
+insert into book(bname, bwriter, bcontent, bpwd) values('파과', '구병모', '조각이 굿입니다', '1234');
+insert into book(bname, bwriter, bcontent, bpwd) values('소년이 온다', '한강', '슬퍼요', '1234');
+insert into book(bname, bwriter, bcontent, bpwd) values('어른의 행복은 조용하다', '태수', '많은 도움이 되었습니다', '1234');
