@@ -25,6 +25,11 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -57,12 +62,19 @@ export default function Example1(){
 
     <h2>select</h2>
     <FormControl fullWidth>
+        {/* 버스 선택 */}
         <InputLabel id="demo-simple-select-label">부서</InputLabel>
         <Select labelId="demo-simple-select-label" id="demo-simple-select" label="부서">
             <MenuItem value={"인사팀"}>인사팀</MenuItem>
             <MenuItem value={"영업팀"}>영업팀</MenuItem>
             <MenuItem value={"개발팀"}>개발팀</MenuItem>
         </Select>
+        {/* 일자 선택 */}
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <DemoContainer components={['DatePicker']}>
+            <DatePicker label="Basic date picker" />
+          </DemoContainer>
+        </LocalizationProvider>
     </FormControl>
 
     <h2>List</h2>

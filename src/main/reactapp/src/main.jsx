@@ -95,5 +95,5 @@ root.render(<Example1/>)
 */
 
 // day10 : MUI
-import Example2 from './example/8_MUI/Example2'
-root.render(<Example2/>)
+import Example1 from './example/8_MUI/Example1'
+root.render(<Example1/>)
