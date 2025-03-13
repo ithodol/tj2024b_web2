@@ -82,8 +82,18 @@ root.render(<Example2/>)
 // day07 : 과제4
 import Task from './example/6_AXIOS/task'
 root.render(<Task/>)
-*/
+
 
 // day08 : 라우터 컴포넌트 렌더링
 import App from './example/7_AXIOS2/App'
 root.render( <App /> )
+
+
+// day10 : MUI
+import Example1 from './example/8_MUI/Example1'
+root.render(<Example1/>)
+*/
+
+// day10 : MUI
+import Example2 from './example/8_MUI/Example2'
+root.render(<Example2/>)
