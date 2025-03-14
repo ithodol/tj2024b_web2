@@ -1,3 +1,11 @@
-insert into book(bname, bwriter, bcontent, bpwd) values('파과', '구병모', '조각이 굿입니다', '1234');
-insert into book(bname, bwriter, bcontent, bpwd) values('소년이 온다', '한강', '슬퍼요', '1234');
-insert into book(bname, bwriter, bcontent, bpwd) values('어른의 행복은 조용하다', '태수', '많은 도움이 되었습니다', '1234');
+INSERT INTO book (bname, bwriter, bcontent, bpwd) VALUES
+('자바의 정석', '남궁성', '자바를 배우기에 좋은 책', '123'),
+('이펙티브 자바', '조슈아 블로크', '자바 고급 개발자를 위한 필독서', '456'),
+('클린 코드', '로버트 C. 마틴', '코드를 깔끔하게 작성하는 방법', '789');
+
+INSERT INTO review (rcontent, bid, rpwd) VALUES
+('책이 정말 좋아요!', 1, '11'),
+('자바 입문자에게 추천합니다.', 1, '12'),
+('자바를 더 깊이 이해할 수 있었어요.', 2, '13'),
+('코딩 스타일을 개선하는 데 도움이 되네요.', 3, '14'),
+('가독성이 중요하다는 걸 깨달았습니다.', 3, '15');
