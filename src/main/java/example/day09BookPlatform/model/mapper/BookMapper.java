@@ -24,6 +24,6 @@ public interface BookMapper {
     public boolean onUpdate(BookDto bookDto);
 
     // 추천 도서 삭제
-    @Delete("delete from book where bid = #{bid}")
-    public boolean onDelete(int bid);
+    @Delete("delete from book where bid = #{bid} and bpwd = #{bpwd}")
+    public boolean onDelete(int bid, String bpwd);
 }

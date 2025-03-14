@@ -36,7 +36,7 @@ public class BookService {
     }
 
     // 추천 도서 삭제
-    public boolean onDelete(@RequestParam int bid){
-        return bookMapper.onDelete(bid);
+    public boolean onDelete(@RequestParam int bid, @RequestParam String bpwd){
+        return bookMapper.onDelete(bid, bpwd);
     }
 }

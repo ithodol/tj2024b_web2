@@ -33,13 +33,17 @@
                 1. queryString 방식 : URL?key=value&key=value / 주로 여러개의 데이터를 보낼 때 사용
                     1. 가상경로 정의 : <Route path="/URL" element = {<컴포넌트/>}></Route>
                     2. 호출 : <Link to="/URL?key1=value1&key2=value2"></Link>
-                    3. const 변수명 = searchParams.get('key')
+                    3. 해당 컴포넌트 
+                        1. import { useSearchParams } from 'react-router-dom';
+                        2. const [ searchParams ] = useSearchParams();
+                        3. const 변수명 = searchParams.get('key');
                 2. path 방식 : URL/value/value / 주로 한두개의 데이터를 보낼 때 사용
                     1. 가상경로 정의 <Route path="/URL/:key1/:key2" element = {<컴포넌트/>}></Route>
                     2. 호출 : <Link to="/URL/value1/value2"> </Link>
                     3. 해당 컴포넌트
                         1. import{useParams} from 'react-router-dom';
                         2. const{key1, key2} = useParams();
+                
 
         7. 가상 URL 정의하지 않은 URL을 특정 컴포넌트 라우팅 / 주로 404 페이지 만듦
             <Route path='*' element={<Page404/>}></Route>

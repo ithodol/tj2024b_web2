@@ -20,5 +20,5 @@ create table review(
 	rpwd varchar(20),
 	bid int,
 	constraint primary key(rid),
-	constraint foreign key(bid) references book(bid)
+	constraint foreign key(bid) references book(bid) on delete cascade
 );

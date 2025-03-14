@@ -100,3 +100,5 @@ root.render(<Example1/>)
 */
 
 // day09 : BookPlatform 평가 과제
+import App from './example/day09BookPlatform/App.jsx'
+root.render(<App/>)

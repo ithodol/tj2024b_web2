@@ -47,10 +47,10 @@ public class BookController {
 
     // 추천 도서 삭제
     @DeleteMapping
-    public boolean onDelete(@RequestParam int bid){
+    public boolean onDelete(@RequestParam int bid, @RequestParam String bpwd){
         System.out.println("BookController.onDelete");
-        System.out.println("bid = " + bid);
-        return bookService.onDelete(bid);
+        System.out.println("bid = " + bid + ", bpwd = " + bpwd);
+        return bookService.onDelete(bid, bpwd);
     }
 
 }
