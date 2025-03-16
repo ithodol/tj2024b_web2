@@ -11,6 +11,7 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useState } from 'react';
 
 export default function Tcreate(props){
+    /*
     const [starttime, setStarttime] = useState('');
     const [startdate, setStartdate] = useState('');
     const [biid, setBiid] = useState('');
@@ -40,6 +41,7 @@ export default function Tcreate(props){
 
 
     }
+        */
 
 
 
@@ -92,8 +94,6 @@ export default function Tcreate(props){
                     </select>*/}
                     <hr/>
                     <button type='button' onClick={handleCreate}>등록</button>
-
-
 
                 </div>
 

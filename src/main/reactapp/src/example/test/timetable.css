@@ -86,3 +86,65 @@ hr{
 .css-10o2lyd-MuiStack-root{
     justify-content: center;
 }
+
+
+/* ㅇㅇ별 조회 */
+.pickContent{
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    height: 800px;
+    padding: 30px;
+}
+.pickTop{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.pickTit{
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+}
+table{
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #ffff;
+    padding: 30px;
+}
+thead > tr > th:first-child{
+    width: 10%;
+}
+thead > tr > th{
+    width: 18%;
+    height: 60px;
+    background-color: #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+}
+tbody > tr > td{
+    height: 50px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.bodyTr:hover td, .bodyTr:hover td > button{
+    font-weight: bold;
+}
+.css-1c5o7vy-MuiPagination-ul{
+    justify-content: center;
+}
+.page{
+    margin-top: 15px;
+    justify-content: center;
+    position: sticky;
+    z-index: 1000;
+    top: 90%;
+    left: 50%;
+}
+tbody > tr > td > button{
+    background-color: #ff914d;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}

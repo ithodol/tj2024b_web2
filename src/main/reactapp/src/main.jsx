@@ -105,5 +105,6 @@ root.render(<App/>)
 */
 
 // 프로젝트 테스ㅡ
-import Tview from './example/test/View'
-root.render(<Tview/>)
+
+import TviewDate from './example/test/ViewDate'
+root.render(<TviewDate/>)
