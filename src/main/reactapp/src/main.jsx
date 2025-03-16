@@ -97,8 +97,13 @@ root.render(<Example1/>)
 // day10 : MUI
 import Example1 from './example/8_MUI/Example1'
 root.render(<Example1/>)
-*/
+
 
 // day09 : BookPlatform 평가 과제
 import App from './example/day09BookPlatform/App.jsx'
 root.render(<App/>)
+*/
+
+// 프로젝트 테스ㅡ
+import Tview from './example/test/View'
+root.render(<Tview/>)
