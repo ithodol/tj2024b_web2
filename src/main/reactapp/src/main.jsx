@@ -106,5 +106,8 @@ root.render(<App/>)
 
 // 프로젝트 테스ㅡ
 
-import TviewDate from './example/test/ViewDate'
-root.render(<TviewDate/>)
+
+// import App from './example/test/reservation/App.jsx'
+// root.render(<App/>)
+import TviewBus from './example/test/ViewBus'
+root.render(<TviewBus/>)
