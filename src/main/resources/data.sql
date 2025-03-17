@@ -1,3 +1,12 @@
+-- -------------------------- web --------------------------
+INSERT INTO member (mid, mpwd, mname) VALUES
+('user1', 'password123', '김철수'),
+('user2', 'qwerty456', '이영희'),
+('user3', 'abcde789', '박민준'),
+('user4', 'helloWorld', '정다은'),
+('user5', 'son1234', '손흥민');
+
+-- -------------------------- day09 --------------------------
 INSERT INTO book (bname, bwriter, bcontent, bpwd) VALUES
 ('자바의 정석', '남궁성', '자바를 배우기에 좋은 책', '123'),
 ('이펙티브 자바', '조슈아 블로크', '자바 고급 개발자를 위한 필독서', '456'),
