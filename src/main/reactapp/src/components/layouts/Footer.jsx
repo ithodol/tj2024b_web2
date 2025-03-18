@@ -2,6 +2,8 @@
 
 export default function Footer(props){
     return(<>
-        <h1>푸터</h1>
+        <div className="footerBox">
+            <p>Copyright ⓒ</p>
+        </div>
     </>)
 }

@@ -8,16 +8,16 @@ import { Link } from "react-router-dom";
 
 export default function Header(props){
     return(<>
-        <div>
-            <ul>
-                <li>
-                    <Link to={"/"}>
-                        <FontAwesomeIcon icon={faHouse} className="home" />&nbsp; 홈
-                    </Link>
-                </li>
+        <div className="headerBox">
+            <ul className="header">
                 <li>
                     <Link to={"/member/signup"}>
                         <FontAwesomeIcon icon={faUserPlus} className="faUserPlus" />&nbsp; 회원가입
+                    </Link>
+                </li>
+                <li>
+                    <Link to={"/"}>
+                        <FontAwesomeIcon icon={faHouse} className="home" />&nbsp; 홈
                     </Link>
                 </li>
                 <li>
