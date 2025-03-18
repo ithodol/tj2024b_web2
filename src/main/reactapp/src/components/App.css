@@ -1,3 +1,37 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 li{list-style-type: none;}
 a{color: black; text-decoration: none;}
+
+.headerBox, .footerBox{
+    background-color: #eeeeee;
+    padding: 30px 0px;
+}
+.footerBox > p{
+    text-align: center;
+}
+
+.header{
+    display: flex;
+
+}
+.header > li {
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+#container{
+    margin: 30px 0px;
+}
+
+
+.signupBtn{
+    background-color: black;
+    color: #ffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+
+}
+
+
