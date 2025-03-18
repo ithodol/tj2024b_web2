@@ -9,6 +9,7 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useState } from 'react';
+//import getBus from './Timetable'; // 컴포넌트 사용
 
 export default function Tcreate(props){
     /*
@@ -43,6 +44,13 @@ export default function Tcreate(props){
     }
         */
 
+
+    // timetable.jsx 에 함수 있음
+    const defaultUrl = 'http://localhost:8080/timetable/'
+    useEffect(() => {
+        getBus( setSelectBuss , defaultUrl + 'getbus' );
+        getBus( setSelectLocs , defaultUrl + 'getloc' );
+    }, []) 
 
 
     return(<> 
