@@ -89,29 +89,41 @@ export default function Signup(props){
 
     return(<>
     <div id="container">
-        <h3>회원가입</h3>
-        <form>
-            아이디<br />
-            <input type="text" name="mid" value={memberInfo.mid} onChange={onInputChange} /> <br /><br />
 
-            비밀번호<br />
-            <input type="password" name="mpwd" value={memberInfo.mpwd} onChange={onInputChange} /> <br /><br />
+            <h3>회원가입</h3>
+            <form>
+                아이디<br />
+                <input type="text" name="mid" value={memberInfo.mid} onChange={onInputChange} /> <br /><br />
 
-            닉네임<br />
-            <input type="text" name="mname" value={memberInfo.mname} onChange={onInputChange} /> <br /><br />
+                비밀번호<br />
+                <input type="password" name="mpwd" value={memberInfo.mpwd} onChange={onInputChange} /> <br /><br />
 
-            프로필<br />
-            <input type="file" accept="image/*" onChange={onFileChange}/><br /><br />
+                닉네임<br />
+                <input type="text" name="mname" value={memberInfo.mname} onChange={onInputChange} /> <br /><br />
 
-            프로필 미리보기<br />
-            {preview && (<>
-                <img src={preview}
-                     style={{width:"100px"}}
-                />
-            </>)} <br /><br />
+                프로필<br />
+                <input type="file" accept="image/*" className="fileInput" onChange={onFileChange}/><br /><br />
 
-            <button type="button" onClick={onSignup} className="signupBtn">회원가입</button>
-        </form>
+                프로필 미리보기<br />
+                {/* {preview && (<>
+                    <img src={preview}
+                        style={{width:"140px"}}
+                    />
+                </>)} <br /><br /> */}
+                {
+                    preview ? (<>
+                        <img src={preview}
+                            style={{width:"140px"}}/><br /><br />
+                    </>)
+                    :
+                    (<>
+                        <div className="previewFalse">사진</div>
+                    </>)
+                }
+
+                <button type="button" onClick={onSignup} className="signupBtn">회원가입</button>
+            </form>
+
     </div>
     </>)
 }

@@ -1,6 +1,7 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 li{list-style-type: none;}
 a{color: black; text-decoration: none;}
+button{cursor: pointer;}
 
 .headerBox, .footerBox{
     background-color: #eeeeee;
@@ -12,7 +13,10 @@ a{color: black; text-decoration: none;}
 
 .header{
     display: flex;
-
+    align-items: center;
+}
+.header > li:nth-child(1){
+    text-align: center;
 }
 .header > li {
     margin: 0 auto;
@@ -20,18 +24,40 @@ a{color: black; text-decoration: none;}
     font-weight: bold;
 }
 #container{
-    margin: 30px 0px;
+    margin: 50px 0px;
+    text-align: center;
+}
+h3{
+    margin: 20px 0px;
+}
+.fileInput{
+    width: 170px;
+    font-size: 12px;
+}
+.previewFalse{
+    margin: 10px auto;
+    padding: 37px;
+    width: 160px;
+    height: 100px;
+    border: 1px solid darkgray;
+    color: gray;
 }
 
-
-.signupBtn{
+.signupBtn,.loginBtn{
+    width: 160px;
     background-color: black;
     color: #ffff;
     border: none;
-    border-radius: 10px;
     padding: 10px 20px;
     font-weight: bold;
-
 }
 
+
+.loginState, .loginStateBtn{
+    background-color: black;
+    color: #ffff;
+    padding: 5px;
+    border: none;
+    margin: 5px 0px;
+}
 
