@@ -1,13 +1,14 @@
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 
-import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
+import { logout } from "../reduxs/userSlice";
 
 export default function Header(props){
 
@@ -17,7 +18,9 @@ export default function Header(props){
     const logininfo = useSelector((state) => state.user.userInfo)
     console.log(logininfo);
 
-
+    // (2) 로그아웃을 하기 위한 userDispatch()
+    const dispatch = useDispatch()
+/* 구 버전 (리덕스 사용 전)
     // (1) 로그인 상태를 저장하는 state 변수, 객체를 저장할 예정이라 빈 객체 { } 를 초기값으로 선언
     const [login, setLogin] = useState({})
     // (2) axios를 이용하여 서버에게 로그인 상태 요청하고 응답받기
@@ -34,6 +37,7 @@ export default function Header(props){
     useEffect(() => {
         onLoginInfo()
     },[])
+*/
 
     // (4) axios 이용하여 로그아웃 요청과 응답 받기
     const navigate = useNavigate();
@@ -41,6 +45,7 @@ export default function Header(props){
         const response = await axios.get('http://localhost:8080/api/member/logout', {withCredentials:true})
         alert('로그아웃 완료');
         navigate('/');
+        dispatch(logout());
     }
 
 
@@ -50,9 +55,9 @@ export default function Header(props){
             <ul className="header">
                 <li>
                     {
-                        login ? (<>
+                        logininfo ? (<>
                             <div className="loginState">
-                                {login.mname} 님
+                                {logininfo.mname} 님
                             </div>
                             <button type="button" className="loginStateBtn" onClick={onLogout}>로그아웃</button>
                         </>)
@@ -64,15 +69,16 @@ export default function Header(props){
                     }
                 </li>
                 <li>
-                    <Link to={"/member/signup"}>
-                        <FontAwesomeIcon icon={faUserPlus} className="faUserPlus" />&nbsp; 회원가입
-                    </Link>
-                </li>
-                <li>
                     <Link to={"/"}>
                         <FontAwesomeIcon icon={faHouse} className="home" />&nbsp; 홈
                     </Link>
                 </li>
+                <li>
+                    <Link to={"/member/signup"}>
+                        <FontAwesomeIcon icon={faUserPlus} className="faUserPlus" />&nbsp; 회원가입
+                    </Link>
+                </li>
+
                 <li>
                     <Link to={"/member/login"}>
                         <FontAwesomeIcon icon={faCircleUser} className="faCircleUser" />&nbsp; 로그인
