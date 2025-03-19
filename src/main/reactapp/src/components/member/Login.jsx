@@ -40,7 +40,7 @@ export default function Login(props){
 
     return(<>
         <div id="container">
-            <h3>로그인</h3>
+            <h2>로그인</h2>
             <form>
                 아이디 <br />
                 <input type="text" name="mid" value={memberInfo.mid} onChange={onInputChange}/> <br /><br />

@@ -90,7 +90,7 @@ export default function Signup(props){
     return(<>
     <div id="container">
 
-            <h3>회원가입</h3>
+            <h2>회원가입</h2>
             <form>
                 아이디<br />
                 <input type="text" name="mid" value={memberInfo.mid} onChange={onInputChange} /> <br /><br />
@@ -120,7 +120,7 @@ export default function Signup(props){
                         <div className="previewFalse">사진</div>
                     </>)
                 }
-
+                <br />
                 <button type="button" onClick={onSignup} className="signupBtn">회원가입</button>
             </form>
 
