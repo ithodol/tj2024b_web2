@@ -1,6 +1,4 @@
-package example.day10;
-
-import org.apache.catalina.User;
+package example.day10._멀티스레드;
 
 // user 클래스
 class User1 extends Thread{
