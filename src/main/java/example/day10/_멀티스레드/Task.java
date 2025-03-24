@@ -3,7 +3,7 @@ package example.day10._멀티스레드;
 import java.util.Scanner;
 
 class 음악 extends Thread{
-    boolean state1 = true; // 무한루프 실행 여부
+    boolean state1 = false; // 무한루프 실행 여부
     @Override
     public void run() {
         try{
@@ -18,7 +18,7 @@ class 음악 extends Thread{
 }
 
 class 웹서핑 extends Thread{
-    boolean state2 = true; // 무한루프 실행 여부
+    boolean state2 = false; // 무한루프 실행 여부
     @Override
     public void run() {
         try{
@@ -41,37 +41,37 @@ public class Task {
         음악 thread1 = new 음악();
 
         웹서핑 thread2 = new 웹서핑();
-        boolean web = false;
+        boolean stateAll = true;
 
 
         Scanner scan = new Scanner(System.in);
-        while (web == false){
+        while (stateAll == true){
             System.out.println("1. 음악 ON/OFF | 2. 웹서핑 ON/OFF | 0. 종료");
             int ch = scan.nextInt();
 
             if(ch == 1){
-                if(thread1.state1 == true) {
+                if(thread1.state1 == false) {
                     System.out.println("음악 시작!");
                     thread1.start();
-                    thread1.state1 = false;
-                }else if(thread1.state1 == false){
-                    System.out.println("음악 종료!");
                     thread1.state1 = true;
+                }else if(thread1.state1 == true){
+                    System.out.println("음악 종료!");
+                    thread1.state1 = false;
                 }
             }else if(ch == 2){
-                if(thread2.state2 == true) {
+                if(thread2.state2 == false ) {
                     System.out.println("웹서핑 시작!");
                     thread2.start();
-                    thread2.state2 = false;
-                }else if(thread2.state2 == false){
-                    System.out.println("웹서핑 종료!");
                     thread2.state2 = true;
+                }else if(thread2.state2 == true){
+                    System.out.println("웹서핑 종료!");
+                    thread2.state2 = false;
                 }
             }else if(ch == 0){
                 System.out.println("스마트폰 종료...");
-                thread1.state1 = true;
-                thread2.state2 = true;
-                web = true;
+                thread1.state1 = false;
+                thread2.state2 = false;
+                stateAll = false;
             }
         } // while end
     } // main end
