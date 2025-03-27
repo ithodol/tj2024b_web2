@@ -2,7 +2,10 @@ package example.day13;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+
+import java.util.List;
 
 @Mapper
 public interface TranMapper {
@@ -19,5 +22,13 @@ public interface TranMapper {
     // (2-1) 입금(더하기)
     @Update("update day13users set money = money + #{money} where name = #{name}")
     public boolean deposit(String name, int money);
+
+
+    // (3) 모든 회원 목록 조회
+    @Select("select name from day13users")
+    public List<String> findAll();
+
+
+    // (3-1) 모든 회원들에게 100원씩 입금(더하기)
 
 }

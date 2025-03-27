@@ -31,4 +31,7 @@ public class TranController {
             return false; // 예외 발생 O -> 이체 실패
         }
     }
+    
+    
+
 }
