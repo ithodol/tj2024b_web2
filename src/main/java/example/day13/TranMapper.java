@@ -28,7 +28,4 @@ public interface TranMapper {
     @Select("select name from day13users")
     public List<String> findAll();
 
-
-    // (3-1) 모든 회원들에게 100원씩 입금(더하기)
-
 }
