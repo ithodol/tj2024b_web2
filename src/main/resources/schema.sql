@@ -2,6 +2,13 @@
 --create database springweb;
 --use springweb;
 
+-- ---------------------- day13 ---------------------------------- --
+DROP TABLE if EXISTS day13users;
+CREATE TABLE day13users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
 -- -------------------------- day11 --------------------------
 DROP TABLE IF EXISTS day11products;
 CREATE TABLE day11products (
